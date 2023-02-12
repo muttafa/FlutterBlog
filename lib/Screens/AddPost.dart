@@ -24,8 +24,42 @@ class _AddPostState extends State<AddPost> {
             actions: [
              Container(
                  padding: EdgeInsets.symmetric(horizontal: 16),
-                 child: GestureDetector(child: Icon(Icons.file_upload),)),
+                 child: GestureDetector(
+                   onTap: (){
+                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                       content: Row(
+                         mainAxisAlignment: MainAxisAlignment.center,
+                         children: [
+                           Text("Tıkladın amk"),
+                         ],
+                       ),
+                     ));
+                   },
+                   child: Icon(Icons.file_upload),)),
         ],
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 12,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 18),
+              height: 170,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Icon(
+                Icons.add_a_photo,
+                color: Colors.black,
+              ),
+
+            )
+          ],
+        ),
       ),
     );
   }
