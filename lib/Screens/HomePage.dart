@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutterblog2/Screens/AddPost.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -29,15 +30,6 @@ class _HomePageState extends State<HomePage> {
           ],
 
         ),
-        actions: <Widget>[
-          GestureDetector(
-            onTap: (){
-              // Tıklayınca gönderiyi firebase ekle
-          },
-            child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                child: Icon(Icons.file_upload))),
-        ],
       ),
       body: Container(),
       floatingActionButton: Container(
@@ -45,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FloatingActionButton(onPressed: (){
-          // Tıkladığında blog ekleme sayfasına git
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> AddPost()));
             },
               child: Icon(Icons.add),
         )],) ,
