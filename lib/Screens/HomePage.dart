@@ -39,6 +39,17 @@ class _HomePageState extends State<HomePage> {
                 child: Icon(Icons.file_upload))),
         ],
       ),
+      body: Container(),
+      floatingActionButton: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FloatingActionButton(onPressed: (){
+          // Tıkladığında blog ekleme sayfasına git
+            },
+              child: Icon(Icons.add),
+        )],) ,
+      ),
     );
   }
 }
