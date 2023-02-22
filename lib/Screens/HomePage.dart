@@ -1,4 +1,5 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterblog2/Screens/AddPost.dart';
 
@@ -31,7 +32,9 @@ class _HomePageState extends State<HomePage> {
 
         ),
       ),
-      body: Container(),
+      body: Container(
+        child: Card(),
+      ),
       floatingActionButton: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,3 +48,23 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+class Card extends StatelessWidget {
+  const Card({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Row(
+          children: [
+            Text(""),
+          ],
+        )
+      ],
+    );
+  }
+}
+

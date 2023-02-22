@@ -13,6 +13,7 @@ class AddPost extends StatefulWidget {
 }
 final TextEditingController nameTextController = TextEditingController();
 final TextEditingController surnameTextController = TextEditingController();
+final TextEditingController messageTextController = TextEditingController();
 class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
@@ -38,6 +39,7 @@ class _AddPostState extends State<AddPost> {
                        'users' : {
                          'userName' : nameTextController.text.toString(),
                          'userSurname' : surnameTextController.text.toString(),
+                         'userMessage' : messageTextController.text.toString(),
                        }
 
                      });
@@ -66,15 +68,19 @@ class _AddPostState extends State<AddPost> {
                       labelText: 'Your Name',
                     )
                     ) ,
-
                   TextField(
                     controller: surnameTextController,
                     decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(width: 3, color: Colors.greenAccent),
-                      ),
-                    ) ,
+                      labelText: 'Your Surname',
+                    )
                   ),
+                  TextField(
+                    controller: messageTextController,
+                    decoration: InputDecoration(
+                      labelText: 'Your Message',
+                    )
+                    ) ,
+
                 ],
 
               ),
